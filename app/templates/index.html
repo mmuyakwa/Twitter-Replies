@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% block title %}Tweets{% endblock %}
+{% block content %}
+
+<section class="hero is-info">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Tweet
+      </h1>
+      {% if tweet_id %}
+      <h2 class="subtitle">
+        {{len}} Antworten zu {{tweet_id}}
+      </h2>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+
+  <p>&nbsp;</p>
+  <form action="" method="POST">
+
+    <div class="field has-addons">
+      <div class="control is-expanded has-icons-left">
+        <input class="input is-info" type="text" placeholder="Geben Sie die URL oder Tweet-Id an:" id="tweet_id"
+          name="tweet_id">
+      </div>
+      <div class="control">
+        <button class="button is-info" type="submit" [disabled]="!form.form.valid">
+          Suchen
+        </button>
+      </div>
+    </div>
+    <p class="help">Geben Sie die URL oder Tweet-Id an:</p>
+  </form>
+
+  <p>&nbsp;</p>
+
+
+  {% if tweet %}
+  <div class="container is-max-desktop">
+    <div class="notification is-info">
+
+      <section class="section">
+        <div class="container">
+          <h1 class="title">{{tweet.user.name }}</h1>
+          <h2 class="subtitle">
+            {{tweet.user.screen_name }}
+          </h2>
+          
+          <article class="message is-black">
+            <div class="message-header">
+              Bio
+            </div>
+            <div class="message-body">
+              {{tweet.user.description}}
+            </div>
+          </article>
+          
+          <div class="field is-grouped is-grouped-multiline">
+            <div class="control">
+              <div class="tags has-addons">
+                <span class="tag is-black">Ort</span>
+                <span class="tag is-white">{{tweet.user.location}}</span>
+              </div>
+            </div>
+
+            <div class="control">
+              <div class="tags has-addons">
+                <span class="tag is-black"># Follower</span>
+                <span class="tag is-white">{{tweet.user.followers_count}}</span>
+              </div>
+            </div>
+          </div>
+
+          <table class="table is-striped">
+            <tbody>
+              <tr>
+                <th>Username</th>
+                <td>Tweet</td>
+                <td>Subjectivität</td>
+                <td>Polarität</td>
+              </tr>
+              <!-- For loop logic of jinja template -->
+
+              <tr>
+                <th>
+                  <figure class="media-left">
+                    <p class="image is-64x64">
+                      <img src="{{tweet.user.profile_image_url_https}}">
+                    </p>
+                  </figure>
+                  <a href="https://twitter.com/{{tweet.user.screen_name}}" target="_blank"
+                    rel="noopener noreferrer">{{tweet.user.screen_name}}</a>
+                </th>
+                <td>
+                  <div class="block">{{ tweet.text.strip().replace("\r","").replace("\n","")}}</div>
+                  <br />
+
+                  <div class="field is-grouped is-grouped-multiline">
+                    <div class="control">
+                      <div class="tags has-addons">
+                        <span class="tag is-black">via</span>
+                        <span class="tag">{{tweet.source}}</span>
+                      </div>
+                    </div>
+
+                    <div class="control">
+                      <div class="tags has-addons">
+                        <span class="tag is-black">erstellt</span>
+                        <span class="tag">{{formatDate(tweet.created_at)}}</span>
+                      </div>
+                    </div>
+
+                    <div class="control">
+                      <div class="tags has-addons">
+                        <span class="tag is-black">retweets</span>
+                        <span class="tag">{{tweet.retweet_count}}</span>
+                      </div>
+                    </div>
+
+                    <div class="control">
+                      <div class="tags has-addons">
+                        <span class="tag is-black">favorisiert</span>
+                        <span class="tag">{{tweet.favorite_count}}</span>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+                </td>
+                <td><span class="tag">{{ subjectivity(tweet.text.strip()) }}</span></td>
+                <td><span class="tag">{{ polarity(tweet.text.strip()) }}</span></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {% if replies %}
+      <section class="section">
+        <div class="container">
+          <h1 class="title">Wörterwolke</h1>
+          <h2 class="subtitle">
+            Die <strong>Wörterwolke</strong> zu den häufig auftretenden Wörtern.
+          </h2>
+          <img src='data:image/png;base64,{{wordcloud}}' />
+        </div>
+      </section>
+      {% endif %}
+
+    </div>
+  </div>
+  {% endif %}
+
+
+  {% if replies %}
+  <table class="table is-striped">
+    <tbody>
+      <tr>
+        <th>Username</th>
+        <td>Antwort/Reply</td>
+        <td>Subjectivität</td>
+        <td>Polarität</td>
+      </tr>
+      <!-- For loop logic of jinja template -->
+      {%for i in range(0, len)%}
+      <tr>
+        <th>
+          <figure class="media-left">
+            <p class="image is-64x64">
+              <img src="{{replies[i].user.profile_image_url_https}}">
+            </p>
+          </figure>
+
+          <a href="https://twitter.com/{{replies[i].user.screen_name}}" target="_blank"
+            rel="noopener noreferrer">{{replies[i].user.screen_name}}</a>
+        </th>
+        <td>
+          <div class="block">{{replies[i].full_text.strip().replace("\r","").replace("\n","")}}</div>
+          <br />
+
+
+          <div class="field is-grouped is-grouped-multiline">
+            <div class="control">
+              <div class="tags has-addons">
+                <span class="tag is-black">via</span>
+                <span class="tag">{{replies[i].source}}</span>
+              </div>
+            </div>
+
+            <div class="control">
+              <div class="tags has-addons">
+                <span class="tag is-black">erstellt</span>
+                <span class="tag">{{ formatDate(replies[i].created_at) }}</span>
+              </div>
+            </div>
+
+            <div class="control">
+              <div class="tags has-addons">
+                <span class="tag is-black">Antwort auf Tweet nach</span>
+                <span class="tag">{{ tweetDates(tweet.created_at, replies[i].created_at) }}</span>
+              </div>
+            </div>
+          </div>
+
+
+
+        </td>
+        <td><span class="tag">{{ subjectivity(replies[i].full_text.strip()) }}</span></td>
+        <td><span class="tag">{{ polarity(replies[i].full_text.strip()) }}</span></td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endblock %}

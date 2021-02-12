@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+tweepy = "*"
+scrapy = "*"
+flask = "*"
+python-decouple = "*"
+python-dotenv = "*"
+markupsafe = "*"
+matplotlib = "*"
+wordcloud = "*"
+pybase64 = "*"
+bytesbufio = "*"
+textblob = "*"
+
+[requires]
+python_version = "3.7"

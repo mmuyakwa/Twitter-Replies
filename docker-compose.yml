@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  web:
+    build: ./
+    container_name: twitter_replies
+    networks:
+      - public
+    ports:
+      - 5007:5000
+    restart: "unless-stopped"
+    environment:
+      - TZ=Europe/Berlin
+      - FLASK_ENV=production
+      - FLASK_DEBUG=False
+      - ENV=production
+      - DEBUG=False
+
+networks:
+  public:
+    external: true

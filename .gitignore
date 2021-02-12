@@ -1,0 +1,5 @@
+app/.env
+app/Pipfile.lock
+app/__pycache__
+.vscode
+move.sh

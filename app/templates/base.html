@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/zero.css')}}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" media="(prefers-color-scheme: dark)"
+    href="{{url_for('static', filename='css/dark-mode.css')}}" />
+  <link rel="icon" type="image/png" href="{{url_for('static', filename='pic/favicon-32x32.png')}}" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{url_for('static', filename='pic/favicon-96x96.png')}}" sizes="96x96">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='pic/apple-icon-180x180.png')}}">
+</head>
+
+<body>
+  {% block content %}
+  {% endblock %}
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Tweet-Replies Search</strong> by {{ company() }}. &copy; {{ date_now() }}
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
