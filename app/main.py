@@ -25,7 +25,7 @@ from decouple import config
 from wordcloud import (WordCloud, STOPWORDS)
 import pybase64
 from io import BytesIO
-from concurrent import futures
+#from concurrent import futures
 
 # configuration
 DEBUG = config('DEBUG')
@@ -44,17 +44,17 @@ def hello():
 
 def tweetSearchHTML(tweet_id):
     if tweet_id != '':
-        #tweet = getTweet(tweet_id)
-        #replies = getReplies(tweet_id)
-        with futures.ThreadPoolExecutor(max_workers=2) as ex:
+        tweet = getTweet(tweet_id)
+        replies = getReplies(tweet_id)
+        """ with futures.ThreadPoolExecutor(max_workers=2) as ex:
             ftweet = ex.submit(getTweet, tweet_id)
-            freplies = ex.submit(getReplies, tweet_id)
+            freplies = ex.submit(getReplies, tweet_id) 
+        tweet = ftweet.result()
+        replies = freplies.result() """
         #print(tweet)
         #print(replies)
         #with open("../output.txt", "w") as outfile:
         #    outfile.write("\n".join(str(item) for item in replies))
-        tweet = ftweet.result()
-        replies = freplies.result()
         wordcloud = ''
         if (len(replies) > 0):
             wordcloud = buildWordCloud(replies)

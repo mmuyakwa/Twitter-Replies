@@ -25,9 +25,8 @@ You will need to provide the ".env"-file in the "docker-compose"-file.
 
 ## Todo's
 
-- [X] MultiThreading - (`futures` implemented from `cuncurrent`, but the improvement is not good enough.)
+- [ ] MultiThreading
 - [ ] Adding external Worker with `redis` and `celery`. - (Will try to add these to the `docker-compose`.)
-- [ ] Trying other methods to unblock the request-time tweepy needs to gather information from Twitter.
 
 ### Screenhots
 
