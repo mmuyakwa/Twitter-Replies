@@ -28,7 +28,7 @@ nltk==3.5
 numpy==1.20.0
 oauthlib==3.1.0
 parsel==1.6.0
-pillow==8.1.0
+pillow==9.2.0
 protego==0.1.16
 pyasn1-modules==0.2.8
 pyasn1==0.4.8
