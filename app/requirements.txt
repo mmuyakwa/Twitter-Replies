@@ -35,7 +35,7 @@ pyasn1==0.4.8
 pybase64==1.1.4
 pycparser==2.20
 pydispatcher==2.0.5
-pyhamcrest==2.0.2
+pyhamcrest==2.0.4
 pyopenssl==20.0.1
 pyparsing==3.0.9
 pysocks==1.7.1
