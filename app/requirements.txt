@@ -55,6 +55,6 @@ tweepy==3.10.0
 twisted==22.10.0
 urllib3==1.26.13
 w3lib==2.1.1
-werkzeug==2.2.2
+werkzeug==2.2.3
 wordcloud==1.8.1
 zope.interface==5.2.0
