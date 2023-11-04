@@ -7,7 +7,7 @@ cffi==1.14.4
 chardet==4.0.0
 click==8.1.6
 constantly==15.1.0
-cryptography==41.0.3
+cryptography==41.0.4
 cssselect==1.2.0
 cycler==0.11.0
 flask==2.2.5
@@ -28,7 +28,7 @@ nltk==3.8.1
 numpy==1.22.0
 oauthlib==3.2.2
 parsel==1.8.1
-pillow==10.0.0
+pillow==10.0.1
 protego==0.1.16
 pyasn1-modules==0.2.8
 pyasn1==0.4.8
@@ -52,9 +52,9 @@ six==1.16.0
 textblob==0.15.3
 tqdm==4.65.0
 tweepy==4.14.0
-twisted==22.10.0
-urllib3==1.26.13
+twisted==23.10.0rc1
+urllib3==1.26.18
 w3lib==2.1.1
-werkzeug==2.2.3
+werkzeug==3.0.1
 wordcloud==1.8.1
 zope.interface==6.0
