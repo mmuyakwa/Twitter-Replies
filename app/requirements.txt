@@ -50,7 +50,7 @@ scrapy==2.7.1
 service-identity==24.1.0
 six==1.16.0
 textblob==0.17.1
-tqdm==4.66.1
+tqdm==4.66.2
 tweepy==4.14.0
 twisted==23.10.0
 urllib3==2.2.0
