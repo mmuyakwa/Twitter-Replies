@@ -49,7 +49,7 @@ requests[socks]==2.31.0
 scrapy==2.11.1
 service-identity==24.1.0
 six==1.16.0
-textblob==0.17.1
+textblob==0.18.0.post0
 tqdm==4.66.2
 tweepy==4.14.0
 twisted==23.10.0
