@@ -21,7 +21,7 @@ jinja2==3.1.3
 jmespath==1.0.1
 joblib==1.3.2
 kiwisolver==1.4.5
-lxml==5.1.0 ; platform_python_implementation == 'CPython'
+lxml==5.2.0 ; platform_python_implementation == 'CPython'
 markupsafe==2.1.5
 matplotlib==3.8.3
 nltk==3.8.1
