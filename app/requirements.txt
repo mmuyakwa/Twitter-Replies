@@ -57,4 +57,4 @@ urllib3==2.2.1
 w3lib==2.1.2
 werkzeug==3.0.3
 wordcloud==1.9.3
-zope.interface==6.3
+zope.interface==6.4
