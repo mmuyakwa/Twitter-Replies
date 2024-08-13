@@ -3,7 +3,7 @@ attrs==24.1.0
 automat==22.10.0
 bytesbufio==1.0.3
 certifi==2024.7.4
-cffi==1.16.0
+cffi==1.17.0
 chardet==5.2.0
 click==8.1.7
 constantly==23.10.4
