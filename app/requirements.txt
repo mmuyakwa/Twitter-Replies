@@ -1,6 +1,6 @@
 -i https://pypi.org/simple
 attrs==24.1.0
-automat==22.10.0
+automat==24.8.0
 bytesbufio==1.0.3
 certifi==2024.7.4
 cffi==1.17.0
