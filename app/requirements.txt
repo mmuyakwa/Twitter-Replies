@@ -47,7 +47,7 @@ regex==2024.9.11
 requests-oauthlib==2.0.0
 requests[socks]==2.32.3
 scrapy==2.11.2
-service-identity==24.1.0
+service-identity==24.2.0
 six==1.16.0
 textblob==0.18.0.post0
 tqdm==4.66.5
