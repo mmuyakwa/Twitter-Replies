@@ -2,7 +2,7 @@
 attrs==25.1.0
 automat==24.8.1
 bytesbufio==1.0.3
-certifi==2024.12.14
+certifi==2025.1.31
 cffi==1.17.1
 chardet==5.2.0
 click==8.1.8
