@@ -32,7 +32,7 @@ pillow==11.1.0
 protego==0.4.0
 pyasn1-modules==0.4.1
 pyasn1==0.6.1
-pybase64==1.4.0
+pybase64==1.4.1
 pycparser==2.22
 pydispatcher==2.0.7
 pyhamcrest==2.1.0
