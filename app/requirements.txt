@@ -25,7 +25,7 @@ lxml==5.3.2 ; platform_python_implementation == 'CPython'
 markupsafe==3.0.2
 matplotlib==3.10.1
 nltk==3.9.1
-numpy==2.2.4
+numpy==2.2.5
 oauthlib==3.2.2
 parsel==1.10.0
 pillow==11.2.1
