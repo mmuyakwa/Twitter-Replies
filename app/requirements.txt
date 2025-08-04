@@ -43,7 +43,7 @@ python-dateutil==2.9.0.post0
 python-decouple==3.8
 python-dotenv==1.1.1
 queuelib==1.8.0
-regex==2024.11.6
+regex==2025.7.34
 requests-oauthlib==2.0.0
 requests[socks]==2.32.4
 scrapy==2.13.3
