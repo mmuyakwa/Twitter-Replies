@@ -45,7 +45,7 @@ python-dotenv==1.1.1
 queuelib==1.8.0
 regex==2025.7.34
 requests-oauthlib==2.0.0
-requests[socks]==2.32.4
+requests[socks]==2.32.5
 scrapy==2.13.3
 service-identity==24.2.0
 six==1.17.0
