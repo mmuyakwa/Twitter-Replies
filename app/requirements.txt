@@ -23,7 +23,7 @@ joblib==1.5.2
 kiwisolver==1.4.9
 lxml==6.0.1 ; platform_python_implementation == 'CPython'
 markupsafe==3.0.2
-matplotlib==3.10.5
+matplotlib==3.10.6
 nltk==3.9.1
 numpy==2.2.6
 oauthlib==3.3.1
