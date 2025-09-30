@@ -51,7 +51,7 @@ six==1.16.0
 textblob==0.15.3
 tqdm==4.65.0
 tweepy==4.14.0
-twisted==23.10.0rc1
+twisted==25.5.0
 urllib3==2.5.0
 w3lib==2.1.1
 werkzeug==3.0.1
