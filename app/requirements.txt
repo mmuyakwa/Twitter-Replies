@@ -50,7 +50,7 @@ service-identity==21.1.0
 six==1.17.0
 textblob==0.15.3
 tqdm==4.67.1
-tweepy==4.14.0
+tweepy==4.16.0
 twisted==25.5.0
 urllib3==2.5.0
 w3lib==2.3.1
