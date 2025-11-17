@@ -35,7 +35,7 @@ pybase64==1.4.2
 pycparser==2.23
 pydispatcher==2.0.5
 pyhamcrest==2.1.0
-pyopenssl==23.2.0
+pyopenssl==25.3.0
 pyparsing==3.2.5
 pysocks==1.7.1
 python-dateutil==2.9.0.post0
