@@ -45,7 +45,7 @@ queuelib==1.8.0
 regex==2025.11.3
 requests==2.32.5
 requests-oauthlib==2.0.0
-scrapy==2.13.3
+scrapy==2.13.4
 service-identity==24.2.0
 six==1.17.0
 textblob==0.19.0
