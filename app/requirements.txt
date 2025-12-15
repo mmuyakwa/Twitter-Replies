@@ -52,7 +52,7 @@ textblob==0.19.0
 tqdm==4.67.1
 tweepy==4.16.0
 twisted==25.5.0
-urllib3==2.6.0
+urllib3==2.6.2
 w3lib==2.3.1
 werkzeug==3.1.4
 wordcloud==1.9.4
