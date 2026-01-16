@@ -29,7 +29,7 @@ oauthlib==3.3.1
 parsel==1.10.0
 pillow==12.1.0
 protego==0.5.0
-pyasn1==0.6.1
+pyasn1==0.6.2
 pyasn1-modules==0.4.2
 pybase64==1.4.3
 pycparser==2.23
@@ -45,7 +45,7 @@ queuelib==1.8.0
 regex==2025.11.3
 requests==2.32.5
 requests-oauthlib==2.0.0
-scrapy==2.14.0
+scrapy==2.14.1
 service-identity==24.2.0
 six==1.17.0
 textblob==0.19.0
