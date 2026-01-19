@@ -29,7 +29,7 @@ oauthlib==3.3.1
 parsel==1.10.0
 pillow==12.1.0
 protego==0.5.0
-pyasn1==0.6.1
+pyasn1==0.6.2
 pyasn1-modules==0.4.2
 pybase64==1.4.3
 pycparser==2.23
