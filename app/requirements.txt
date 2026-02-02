@@ -26,7 +26,7 @@ matplotlib==3.10.8
 nltk==3.9.2
 numpy==2.3.3
 oauthlib==3.3.1
-parsel==1.10.0
+parsel==1.11.0
 pillow==12.1.0
 protego==0.5.0
 pyasn1==0.6.2
