@@ -53,7 +53,7 @@ tqdm==4.67.1
 tweepy==4.16.0
 twisted==25.5.0
 urllib3==2.6.3
-w3lib==2.3.1
+w3lib==2.4.0
 werkzeug==3.1.5
 wordcloud==1.9.6
 zope-interface==8.2
